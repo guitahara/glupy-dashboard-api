@@ -10,10 +10,10 @@ const login = async credentials => {
     ? {
       status: 200,
       name: user.name,
-      username: user.username,
+      username: user.userName,
       token: generateToken({
         name: user.name,
-        username: user.username,
+        username: user.userName,
         sellerId: user.sellerId
       }) }
     : {

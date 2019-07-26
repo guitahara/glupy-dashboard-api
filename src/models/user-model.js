@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const userSchema = new mongoose.Schema({
   name: String,
   userName: {type: String, index:{unique:true}},
+  sellerId: String,
   password: String
 })
 
