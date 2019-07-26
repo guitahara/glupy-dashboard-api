@@ -6,6 +6,7 @@ const listsService = require('./lists-service')
 const storesService = require('./stores-service')
 const productsService = require('./products-service')
 const userService = require('./users-service')
+const loginService = require('./login-service')
 
 module.exports = {
   customersService,
@@ -15,5 +16,6 @@ module.exports = {
   listsService,
   storesService,
   productsService,
-  userService
+  userService,
+  loginService
 }
