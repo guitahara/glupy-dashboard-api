@@ -1,10 +1,10 @@
-const {customersController} = require('../controllers/index')
+const { customersController } = require('../controllers/index')
 
 module.exports = (app) => {
-	app.route('/api/customers')
+  app.route('/api/customers')
     .get(customersController.find)
 
-	app.route('/api/customers/:id')
+  app.route('/api/customers/:id')
     .get(customersController.findById)
     .put(customersController.update)
 }

@@ -5,8 +5,8 @@ const axiosSeller = axios.create({
 })
 
 const axiosCustomer = axios.create({
-  baseURL: 'https://glupy-backend.herokuapp.com/customer'
-}) 
+  baseURL: 'https://glupy-backend.herokuapp.com/customers'
+})
 
 const axiosOrders = axios.create({
   baseURL: 'https://glupy-backend.herokuapp.com/orders'

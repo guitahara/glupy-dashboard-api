@@ -1,9 +1,9 @@
-const {ordersController} = require('../controllers/index')
+const { ordersController } = require('../controllers/index')
 
 module.exports = (app) => {
-	app.route('/api/orders')
-		.get(ordersController.find)
+  app.route('/api/orders')
+    .get(ordersController.find)
 
-	app.route('/api/orders/:id')
-		.get(ordersController.findById)
+  app.route('/api/orders/:id')
+    .get(ordersController.findById)
 }

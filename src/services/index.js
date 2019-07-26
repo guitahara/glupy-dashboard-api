@@ -4,6 +4,8 @@ const logsService = require('./logs-service')
 const ordersService = require('./orders-service')
 const listsService = require('./lists-service')
 const storesService = require('./stores-service')
+const productsService = require('./products-service')
+const userService = require('./users-service')
 
 module.exports = {
   customersService,
@@ -11,5 +13,7 @@ module.exports = {
   logsService,
   ordersService,
   listsService,
-  storesService
+  storesService,
+  productsService,
+  userService
 }

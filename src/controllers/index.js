@@ -4,6 +4,8 @@ const sellersController = require('./sellers-controller')
 const storesController = require('./stores-controller')
 const ordersController = require('./orders-controller')
 const logsController = require('./logs-controller')
+const productsController = require('./products-controller')
+const usersController = require('./users-controller')
 
 module.exports = {
   listsController,
@@ -11,5 +13,7 @@ module.exports = {
   sellersController,
   storesController,
   ordersController,
-  logsController
+  logsController,
+  productsController,
+  usersController
 }

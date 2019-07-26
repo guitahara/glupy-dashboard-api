@@ -1,8 +1,8 @@
-const {axiosSeller} = require('../infrastructure/axios/index')
+const { axiosSeller } = require('../infrastructure/axios/index')
 
 const find = async () => {
   try {
-    let response = await axiosSeller.get('/')
+    const response = await axiosSeller.get('/')
     return response.data
   } catch (error) {
     throw error
@@ -11,7 +11,7 @@ const find = async () => {
 
 const findById = async id => {
   try {
-    let response = await axiosSeller.get(`/${id}`)
+    const response = await axiosSeller.get(`/${id}`)
     return response.data
   } catch (error) {
     throw error
@@ -20,7 +20,7 @@ const findById = async id => {
 
 const update = async (id, data) => {
   try {
-    let response = await axiosSeller.put(`/${id}`, data)
+    const response = await axiosSeller.put(`/${id}`, data)
     return response.data
   } catch (error) {
     throw error
