@@ -2,6 +2,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const partialResponse = require('partial-response-express')
+const auth = require('./authorizer')
 
 module.exports = app => {
   app.use(partialResponse())
@@ -13,7 +14,7 @@ module.exports = app => {
     allowMethods: ['GET', 'POST', 'UPDATE', 'PUT', 'PATCH', 'DELETE'],
     allowHeaders: ['Content-Type', 'Authorization', 'Accept']
   }))
-
+  app.use(auth)
   app.use(bodyParser.json())
   app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
   app.use(bodyParser.urlencoded({ extended: true }))
