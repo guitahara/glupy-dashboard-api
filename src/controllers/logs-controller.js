@@ -2,7 +2,7 @@ const { logsService } = require('../services/index')
 
 const find = async (req, res) => {
   try {
-    const logs = await logsService.find()
+    const logs = await logsService.find({ sellerId: req.user.sellerId })
     res.status(200).send(logs)
   } catch (error) {
     res.status(500).send({ message: 'Error. Could not get logs' })

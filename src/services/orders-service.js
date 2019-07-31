@@ -1,21 +1,13 @@
 const { axiosOrders } = require('../infrastructure/axios/index')
 
 const find = async () => {
-  try {
-    const response = await axiosOrders.get('/')
-    return response.data
-  } catch (error) {
-
-  }
+  const response = await axiosOrders.get('/')
+  return response.data
 }
 
 const findById = async id => {
-  try {
-    const response = await axiosOrders.get(`/${id}`)
-    return response.data
-  } catch (error) {
-    throw error
-  }
+  const response = await axiosOrders.get(`/${id}`)
+  return response.data
 }
 
 module.exports = {

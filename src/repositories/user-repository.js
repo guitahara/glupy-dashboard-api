@@ -36,9 +36,9 @@ const update = async data => {
   }
 }
 
-const remove = async _id => {
+const remove = async (_id, sellerId) => {
   try {
-    return User.deleteOne({ _id: new ObjectId(_id) })
+    return User.deleteOne({ _id: new ObjectId(_id), sellerId })
   } catch (error) {
     throw error
   }

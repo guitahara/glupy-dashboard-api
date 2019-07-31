@@ -1,11 +1,11 @@
 const { listsController } = require('../controllers/index')
 
 module.exports = (app) => {
-  app.route('/api/lists')
+  app.route('/api/stores/:storeId/lists')
     .get(listsController.find)
     .post(listsController.create)
 
-  app.route('/api/lists/:id')
+  app.route('/api/stores/:storeId/lists/:id')
     .put(listsController.update)
     .delete(listsController.remove)
 }

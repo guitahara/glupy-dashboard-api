@@ -2,7 +2,7 @@ const { ordersService } = require('../services/index')
 
 const find = async (req, res) => {
   try {
-    const orders = await ordersService.find()
+    const orders = await ordersService.find({ sellerId: req.user.sellerId })
     res.status(200).send(orders)
   } catch (error) {
     res.status(500).send({ message: 'Error. Could not get orders' })

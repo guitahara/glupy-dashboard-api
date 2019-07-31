@@ -36,9 +36,9 @@ const update = async data => {
   }
 }
 
-const remove = async _id => {
+const remove = async (_id, sellerId) => {
   try {
-    return userRepository.remove(_id)
+    return userRepository.remove(_id, sellerId)
   } catch (error) {
     console.log('Error! Could not update user.')
     throw error
