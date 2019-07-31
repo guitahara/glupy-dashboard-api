@@ -2,46 +2,26 @@ const { User } = require('../models/index')
 const { ObjectId } = require('mongoose').Types
 
 const create = async data => {
-  try {
-    const user = new User(data)
-    return user.save()
-  } catch (error) {
-    throw error
-  }
+  const user = new User(data)
+  return user.save()
 }
 
 const findById = async _id => {
-  try {
-    return User.findOne({ _id: new ObjectId(_id) })
-  } catch (error) {
-    throw error
-  }
+  return User.findOne({ _id: new ObjectId(_id) })
 }
 
 const find = async (filter = {}) => {
-  try {
-    return User.find(filter)
-  } catch (error) {
-    throw error
-  }
+  return User.find(filter)
 }
 
 const update = async data => {
-  try {
-    const user = new User(data)
-    user.isNew = false
-    return user.save()
-  } catch (error) {
-    throw error
-  }
+  const user = new User(data)
+  user.isNew = false
+  return user.save()
 }
 
 const remove = async (_id, sellerId) => {
-  try {
-    return User.deleteOne({ _id: new ObjectId(_id), sellerId })
-  } catch (error) {
-    throw error
-  }
+  return User.deleteOne({ _id: new ObjectId(_id), sellerId })
 }
 
 module.exports = {

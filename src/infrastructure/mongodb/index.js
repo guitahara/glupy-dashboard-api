@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-mongoose.set('debug', true)
+mongoose.set('debug', process.env.NODE_ENV === 'prod')
 
 const connection = async () => {
   try {
-    await mongoose.connect('mongodb://root:dummy_pass@localhost:27017/glupy?authSource=admin', {
+    await mongoose.connect(process.env.MONGO_CONNECTION || 'mongodb://root:dummy_pass@localhost:27017/glupy?authSource=admin', {
       useNewUrlParser: true,
       auth: { authdb: 'admin' }
     })

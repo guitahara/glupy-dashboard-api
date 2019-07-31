@@ -1,19 +1,19 @@
 const axios = require('axios')
 
 const axiosSeller = axios.create({
-  baseURL: 'https://glupy-backend.herokuapp.com/sellers'
+  baseURL: process.env.SELLER_API || 'https://glupy-backend.herokuapp.com/sellers'
 })
 
 const axiosCustomer = axios.create({
-  baseURL: 'https://glupy-backend.herokuapp.com/customers'
+  baseURL: process.env.CUSTOMER_API || 'https://glupy-backend.herokuapp.com/customers'
 })
 
 const axiosOrders = axios.create({
-  baseURL: 'https://glupy-backend.herokuapp.com/orders'
+  baseURL: process.env.ORDERS_API || 'https://glupy-backend.herokuapp.com/orders'
 })
 
 const axiosLogs = axios.create({
-  baseURL: 'https://glupy-backend.herokuapp.com/logs'
+  baseURL: process.env.LOGS_API || 'https://glupy-backend.herokuapp.com/logs'
 })
 
 module.exports = {
